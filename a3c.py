@@ -5,9 +5,6 @@ import gym
 import threading
 from a3c_network import *
 import os
-from rmsprop_applier import RMSPropApplier
-from ale_python_interface import ALEInterface
-
 
 flags = tf.app.flags
 flags.DEFINE_string('game', 'Breakout-v0', 'Name of the game to play.')
