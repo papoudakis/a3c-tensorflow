@@ -223,6 +223,7 @@ class Worker:
                 targets[i] = R_t
 
             # compute the advantage based on GAE
+            # code from https://github.com/openai/universe-starter-agent
             delta = np.array(prev_reward) + gamma * np.array(state_values[1:]) - np.array(state_values[:-1])
             advantage = scipy.signal.lfilter([1], [1, -gamma], delta[::-1], axis=0)[::-1]
 
