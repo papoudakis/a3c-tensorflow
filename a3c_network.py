@@ -9,6 +9,8 @@ T = 0
 EPSILON = 1e-10
 
 
+# initialization code from https://github.com/miyosuda/async_deep_reinforce
+
 def fc_variable(weight_shape):
     input_channels = weight_shape[0]
     output_channels = weight_shape[1]
@@ -31,6 +33,7 @@ def conv_variable(weight_shape):
     return weight, bias
 
 
+# sample policy code from https://github.com/coreylynch/async-rl
 def sample_policy_action(probs):
     probs = probs - np.finfo(np.float32).epsneg
     histogram = np.random.multinomial(1, probs)

@@ -8,13 +8,12 @@ from PIL import Image
 import cv2
 import time
 from scipy.misc import imresize
-#~ skimage.transform.resize
 
 
 def rgb2gray(rgb):
     return np.dot(rgb[...,:3], [0.299, 0.587, 0.114])
 
-
+# code is based on https://github.com/coreylynch/async-rl
 class Env(object):
 
     def __init__(self, gym_env, resized_width, resized_height, agent_history_length):
