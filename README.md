@@ -10,3 +10,10 @@ This repo contains python code for replicating the algorith asynchronous advanta
 * skimage
 
 
+## Resources
+
+https://github.com/miyosuda/async_deep_reinforce
+
+https://github.com/coreylynch/async-rl
+
+https://github.com/muupan/async-rl
