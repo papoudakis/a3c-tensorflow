@@ -9,6 +9,19 @@ This repo contains python code for replicating the asynchronous advantage actor-
 * gym (Atari)
 * skimage
 
+## Training
+
+For training a3c algorithm in BreakoutDeterministic-v3 using 8 parallel actor learner threads execute the following command:
+```
+python a3c.py --game BreakoutDeterministic-v3 --num_concurrent 8
+```
+
+## Testing
+
+For testing a trained a3c agent execute the folowing command
+```
+python a3c.py  --game BreakoutDeterministic-v3 --checkpoint_path path_to_checkpoint --testing True
+```
 
 ## Resources
 
